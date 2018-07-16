@@ -1,0 +1,30 @@
+%pokemon-box{
+    background-color:#DCDCDC;
+                width: 20%;
+                height: 50%;
+                position: absolute;
+                left:20%;
+                top:50%;
+                z-index: -2;
+                border-radius: 50px;
+}
+
+%pokemon-img{
+    width:100%;
+}
+%pokemon-txt{
+    background-color:#DCDCDC;
+    width: 20%;
+       height: 50%;
+    position: absolute;
+      left:42%;
+      top:50%;
+     z-index: -2;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+%btn-wh{
+    width: 10px;
+    height: 30px;
+}
