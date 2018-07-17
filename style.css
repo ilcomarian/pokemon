@@ -66,25 +66,19 @@ body {
       left: 30%;
       z-index: -4; }
     #container #img #pokemon1 {
-      z-index: -5;
-      display: none; }
+      z-index: -5; }
     #container #img #pokemon2 {
-      display: none;
       z-index: -5; }
     #container #img #pokemon3 {
-      display: none;
       z-index: -5; }
   #container #txt {
     text-align: center; }
     #container #txt #txt-pok1 {
-      display: none;
       z-index: -5; }
     #container #txt #txt-pok2 {
-      display: none;
       z-index: -5; }
     #container #txt #txt-pok3 {
-      z-index: -5;
-      display: none; }
+      z-index: -5; }
   #container #btn {
     width: 20%;
     height: 20%;
