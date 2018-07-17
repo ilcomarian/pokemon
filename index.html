@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
+
 <body>
-  
-    <div id = "container">
-        <audio id="audio"loop autoplay >
-            <source src="img/audio.mp3" type="audio/ogg">
-          </audio>
-      <video id= "frame" >
-        <source src="img/pokemon.mp4" type="video/mp4">
-          <source src="mov_bbb.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
-      <img src="img/tv.gif" id="tv"alt="">
-            <div id = "img">
-                   
-                   
-                   <img src="img/logo.png" id="logo" alt="">
-<!-- pokemon1 -->                   
-                    <div id = 'pokemon1'>                    
-                    <img src="" id = "img1" class="img1" alt="">                     
-                     
 
-                    </div>
-<!-- pokemon2 -->
-                    <div id ="pokemon2">
+  <div id="container">
+    <audio id="audio" loop autoplay>
+      <source src="img/audio.mp3" type="audio/ogg">
+    </audio>
+    <video id="frame">
+      <source src="img/pokemon.mp4" type="video/mp4">
+      <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support the video tag.
+    </video>
+    <img src="img/tv.gif" id="tv" alt="">
+    <div id="img">
 
-                    <img src=""  id = "img2" class="img1"  alt=""> 
-                           
-                    </div>
-<!-- pokemon3 -->
-                    <div id = "pokemon3">
 
-                    <img src=""  id = "img3" class="img1" alt="">
-                                         
-                    </div>
-             </div>
-             
-             <div id = "txt">
+      <img src="img/logo.png" id="logo" alt="">
+      <!-- pokemon1 -->
+      <div id='pokemon1'>
+        <img src="" id="img1" class="img1" alt="">
 
-               <div id="txt-pok1">
-                <h1 id="name1"></h1>
-                <p id="hp1"> </p>
-                <p id="attack1">  </p> 
-                <p id ="defense1"></p>
-                <p id ="ability1"> </p>
-               </div>
-               
-               <div id="txt-pok2">
-                 <h1 id="name2"></h1>
-                  <p id="hp2"></p>
-                  <p id="attack2"> </p>
-                  <p id ="defense2"> </p>
-                  <p id ="ability2" ></p>
-               </div> 
 
-               <div id="txt-pok3">
-                <h1 id ="name3"></h1>
-                 <p id="hp3"></p>
-                 <p id="attack3"></p>
-                 <p id ="defense3"></p>
-                 <p id ="ability3"></p>
-               </div> 
+      </div>
+      <!-- pokemon2 -->
+      <div id="pokemon2">
 
-             </div>
-             <div  id = "btn">
-               <div id = "btn1-6">
-                  <div id = "btn-pok1"></div>
-                  <div id = "btn-pok2"></div>
-                  <div id = "btn-pok3"></div>
-                  <div id = "btn1" ></div>
-                  <div id = "btn2"></div>
-                  <div id = "btn3"></div>
-                <div  id="btn4"></div>     
-                <div  id="btn5"></div>              
-                <div  id="btn6"></div>                    
-              </div>
-            
-             <button type="button" id="fight">fight</button>
-             <div id = "btn7-8">             
-              <div id =btn-c>
-             <div id="btn-c1"></div>
-             <div id="btn-c2"></div>
-             <div id="btn-c3"></div>
-             <div id="btn-c4"></div>
-                         </div>
-                         <div id ="on"></div>
-            </div>
-            </div>
+        <img src="" id="img2" class="img1" alt="">
+
+      </div>
+      <!-- pokemon3 -->
+      <div id="pokemon3">
+
+        <img src="" id="img3" class="img1" alt="">
+
+      </div>
     </div>
-      
-      
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="script.js"></script>
-   
+
+    <div id="txt">
+
+      <div id="txt-pok1">
+        <h1 id="name1"></h1>
+        <p id="hp1"> </p>
+        <p id="attack1"> </p>
+        <p id="defense1"></p>
+        <p id="ability1"> </p>
+      </div>
+
+      <div id="txt-pok2">
+        <h1 id="name2"></h1>
+        <p id="hp2"></p>
+        <p id="attack2"> </p>
+        <p id="defense2"> </p>
+        <p id="ability2"></p>
+      </div>
+
+      <div id="txt-pok3">
+        <h1 id="name3"></h1>
+        <p id="hp3"></p>
+        <p id="attack3"></p>
+        <p id="defense3"></p>
+        <p id="ability3"></p>
+      </div>
+
+    </div>
+    <div id="btn">
+      <div id="btn1-6">
+        <div id="btn-pok1" class="btn-pok"></div>
+        <div id="btn-pok2" class="btn-pok"></div>
+        <div id="btn-pok3" class="btn-pok"></div>
+        <div id="btn1"></div>
+        <div id="btn2"></div>
+        <div id="btn3"></div>
+        <div id="btn4"></div>
+        <div id="btn5"></div>
+        <div id="btn6"></div>
+      </div>
+
+      <button type="button" id="fight">fight</button>
+      <div id="btn7-8">
+        <div id=btn-c>
+          <div id="btn-c1"></div>
+          <div id="btn-c2"></div>
+          <div id="btn-c3"></div>
+          <div id="btn-c4"></div>
+        </div>
+        <div id="on"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+
 </body>
+
 </html>
