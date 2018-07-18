@@ -10,7 +10,7 @@ let img1 = document.getElementById('img1')
 let img2 = document.getElementById('img2')
 let img3 = document.getElementById('img3')
 
-let arr =[]
+
 
 //pokemon1
 let name1 = document.getElementById('name1')
@@ -41,6 +41,7 @@ class Pokemon {
   }
 //"name" + 1 = name1
   render(num) {
+    console.log(' ds')
     document.getElementById('name' + num).append(this.name);
     document.getElementById('hp' + num).append(this.hp);
     document.getElementById('attack' + num).append(this.attack);
@@ -67,23 +68,24 @@ let namePokemon = (name, img, num) => axios.get('https://pokeapi.co/api/v2/pokem
   let ability = data.abilities['0'].ability.name
   let pokk = new Pokemon(str(name), imgp(name, img), hp, attack, defense, ability)
   pokk.render(num);
+  console.log('ss')
 });
-arr.push(pokemon1,pokemon2,pokemon3,txtpok1,txtpok2,txtpok3)
+let arr =[pokemon1,pokemon2,pokemon3,txtpok1,txtpok2,txtpok3]
 
 let func = (num) => {
-   
+  console.log(num)
   for(let i = 0; i < arr.length; i++){
     arr[i].classList.add('none')
-    
+   
   }
- 
-  if(num){
+  console.log(func)
+ if(num){
   let pokemon = document.getElementById('pokemon' + num)
   let text = document.getElementById('txt-pok' + num)
   pokemon.classList.remove('none')
-  text.classList.remove('none')}
+  text.classList.remove('none')
   
-}
+}}
 
 
 let btnpok1 = document.getElementById('btn-pok1');
@@ -211,11 +213,7 @@ let b3 = document.getElementById('btn3')
 let btn6 = document.getElementById('btn6')
 
 
-// let boxImg = (str) => {
-//   pokemon1.style.display = str
-//   pokemon2.style.display = str
-//   pokemon3.style.display = str
-// }
+
 let arr2=[pokemon1,pokemon2,pokemon3]
 let imgStyle = (width, height, num) => {
 
@@ -223,9 +221,9 @@ let imgStyle = (width, height, num) => {
     arr2[k].style.width = width + "%"
     arr2[k].style.height = height + "%"
     arr2[k].style.marginLeft= (num*k)  + "%"
+     arr2[k].style.display="block"
   }
 
-  
 }
 let btn1to3dislplay = (str) => {
   btnpok1.style.display = str
@@ -241,14 +239,20 @@ let b1to3 = (str) => {
 
 let openClose = 0;
 document.getElementById('btn6').onclick = () => {
- alert('')
+ if(openClose === 0){
+   func()
+ imgStyle(10,20,13)
+ openClose++
+}
+else if(openClose ===1) {
+  func()
+  imgStyle(20,50,0)
+  openClose = 0
+}
 }
  
 
-
-
-
-// select 2 pokemons 
+//select 2 pokemons 
 
 
 
@@ -270,132 +274,132 @@ b1.onclick = () => {
     p1--
     select--
   }
-
 }
-b2.onclick = () => {
-  if (select === 0 || select === 1 && p2 === 0) {
-    img2.classList.add('select')
-    select++
-    p2++
-  } else {
-    img2.classList.remove('select')
-    p2--
-    select--
-  }
-}
-b3.onclick = () => {
-  if (select === 0 || select === 1 && p3 === 0) {
-    img3.classList.add('select')
-    select++
-    p3++
-  } else {
-    img3.classList.remove('select')
-    p3--
-    select--
-  }
-}
+// }
+// b2.onclick = () => {
+//   if (select === 0 || select === 1 && p2 === 0) {
+//     img2.classList.add('select')
+//     select++
+//     p2++
+//   } else {
+//     img2.classList.remove('select')
+//     p2--
+//     select--
+//   }
+// }
+// b3.onclick = () => {
+//   if (select === 0 || select === 1 && p3 === 0) {
+//     img3.classList.add('select')
+//     select++
+//     p3++
+//   } else {
+//     img3.classList.remove('select')
+//     p3--
+//     select--
+//   }
+// }
 
-//fight algoritm
-class Pokemonfight {
-  constructor(name, life, attack) {
-    this.name = name;
-    this.life = life;
-    this.attack = attack;
+// //fight algoritm
+// class Pokemonfight {
+//   constructor(name, life, attack) {
+//     this.name = name;
+//     this.life = life;
+//     this.attack = attack;
 
-  }
+//   }
 
-}
+// }
 
-let fight = (p1, p2) => {
-  if (p1.life > 0) {
-    p1.life -= p2.attack;
-  }
-  if (p2.life > 0) {
-    p2.life -= p1.attack
-  } else if (p1.life <= 0 || p2.life <= 0) {
-    if (p1.life === p2.life) {
-      return "tie"
-    } else if (p1.life > 0) {
-      return p1.name
-    } else {
-      return p2.name
-    }
-  }
-  return fight(p1, p2)
+// let fight = (p1, p2) => {
+//   if (p1.life > 0) {
+//     p1.life -= p2.attack;
+//   }
+//   if (p2.life > 0) {
+//     p2.life -= p1.attack
+//   } else if (p1.life <= 0 || p2.life <= 0) {
+//     if (p1.life === p2.life) {
+//       return "tie"
+//     } else if (p1.life > 0) {
+//       return p1.name
+//     } else {
+//       return p2.name
+//     }
+//   }
+//   return fight(p1, p2)
 
-}
-//fight    
-let f1 = 0
-let btn5 = document.getElementById('btn5')
+// }
+// //fight    
+// let f1 = 0
+// let btn5 = document.getElementById('btn5')
 
-btn5.onclick = () => {
-  if (f1 === 0) {
-    // pokemon1.style.display = 'none'
-    // pokemon2.style.display = 'none'
-    // pokemon3.style.display = 'none'
-func()
-console.log('asd')
+// btn5.onclick = () => {
+//   if (f1 === 0) {
+//     // pokemon1.style.display = 'none'
+//     // pokemon2.style.display = 'none'
+//     // pokemon3.style.display = 'none'
+ 
+// console.log('asd')
 
-    if (img1.classList.contains('select')) {
-      pokemon1.style.display = 'block'
+//     if (img1.classList.contains('select')) {
+//       pokemon1.style.display = 'block'
       
-    }
-    if (img2.classList.contains('select')) {
-      pokemon2.style.display = 'block'
-    }
-    if (img3.classList.contains('select')) {
-      pokemon3.style.display = 'block'
-    }
-    f1++
-  }
-   else if (f1 === 1) {
-    f1--;
-    if (img1.classList.contains('select') && img2.classList.contains('select')) {
+//     }
+//     if (img2.classList.contains('select')) {
+//       pokemon2.style.display = 'block'
+//     }
+//     if (img3.classList.contains('select')) {
+//       pokemon3.style.display = 'block'
+//     }
+//     f1++
+//   }
+//    else if (f1 === 1) {
+//     f1--;
+//     if (img1.classList.contains('select') && img2.classList.contains('select')) {
 
 
-      let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
-      let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
+//       let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
+//       let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
 
-      if (fight(pokf1, pokf2) === name2.innerHTML) {
-        img1.src = ''
+//       if (fight(pokf1, pokf2) === name2.innerHTML) {
+//         img1.src = ''
 
-      }
-      if (fight(pokf1, pokf2) === name1.innerHTML) {
-        img2.src = ''
+//       }
+//       if (fight(pokf1, pokf2) === name1.innerHTML) {
+//         img2.src = ''
 
-      }
+//       }
 
-    } else if (img2.classList.contains('select') && img3.classList.contains('select')) {
-
-
-      let pokf3 = new Pokemonfight(name3.innerHTML, hp3.innerHTML, attack3.innerHTML)
-      let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
-      if (fight(pokf2, pokf3) === name2.innerHTML) {
-        img3.src = ''
-
-      }
-      if (fight(pokf2, pokf3) === name3.innerHTML) {
-        img2.src = ''
-
-      }
-
-    } else if (img1.classList.contains('select') && img3.classList.contains('select')) {
+//     } else if (img2.classList.contains('select') && img3.classList.contains('select')) {
 
 
-      let pokf3 = new Pokemonfight(name3.innerHTML, hp3.innerHTML, attack3.innerHTML)
-      let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
+//       let pokf3 = new Pokemonfight(name3.innerHTML, hp3.innerHTML, attack3.innerHTML)
+//       let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
+//       if (fight(pokf2, pokf3) === name2.innerHTML) {
+//         img3.src = ''
 
-      if (fight(pokf1, pokf3) === name1.innerHTML) {
-        img3.src = ''
+//       }
+//       if (fight(pokf2, pokf3) === name3.innerHTML) {
+//         img2.src = ''
 
-      }
-      if (fight(pokf1, pokf3) === name3.innerHTML) {
-        img1.src = ''
+//       }
 
-      }
-    }
-  }
-}
+//     } else if (img1.classList.contains('select') && img3.classList.contains('select')) {
+
+
+//       let pokf3 = new Pokemonfight(name3.innerHTML, hp3.innerHTML, attack3.innerHTML)
+//       let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
+
+//       if (fight(pokf1, pokf3) === name1.innerHTML) {
+//         img3.src = ''
+
+//       }
+//       if (fight(pokf1, pokf3) === name3.innerHTML) {
+//         img1.src = ''
+
+//       }
+//     }
+//   }
+// }
 
 
 
