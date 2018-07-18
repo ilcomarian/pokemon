@@ -37,9 +37,9 @@ class Pokemon {
     this.defense = defense;
     this.ability = ability;
   }
-  //"name" + 1 = name1
+   
   render(num) {
-    console.log(" ds");
+   
     document.getElementById("name" + num).append(this.name);
     document.getElementById("hp" + num).append(this.hp);
     document.getElementById("attack" + num).append(this.attack);
@@ -71,16 +71,16 @@ let namePokemon = (name, img, num) =>
       ability
     );
     pokk.render(num);
-    console.log("ss");
+ 
   });
 let arr = [pokemon1, pokemon2, pokemon3, txtpok1, txtpok2, txtpok3];
 
 let func = num => {
-  console.log(num);
+ 
   for (let i = 0; i < arr.length; i++) {
     arr[i].classList.add("none");
   }
-  console.log(func);
+ 
   if (num) {
     let pokemon = document.getElementById("pokemon" + num);
     let text = document.getElementById("txt-pok" + num);
@@ -263,13 +263,13 @@ let remove = 0;
 let p1 = 0;
 let p2 = 0;
 let p3 = 0;
-console.log(select, p1, p2, p3);
+
 b1.onclick = () => {
   if (select <= 1 && p1 === 0) {
     img1.classList.add("select");
     select++;
     p1 = 1;
-    console.log(select, p1, p2, p3);
+   
   } else if (p1 === 1) {
     img1.classList.remove("select");
     select--;
@@ -282,7 +282,7 @@ b2.onclick = () => {
     img2.classList.add("select");
     select++;
     p2 = 1;
-    console.log(select, p1, p2, p3);
+
   } else if (p2 === 1) {
     img2.classList.remove("select");
     select--;
@@ -294,7 +294,7 @@ b3.onclick = () => {
     img3.classList.add("select");
     select++;
     p3 = 1;
-    console.log(select, p1, p2, p3);
+
   } else if (p3 === 1) {
     img3.classList.remove("select");
     select--;
@@ -343,23 +343,66 @@ btn5.onclick = () => {
   if (p3 === 1) {
     pokemon3.classList.remove("none");
   }
-  f1++;
-};
-//    else if (f1 === 1) {
-//     f1--;
-//     if (img1.classList.contains('select') && img2.classList.contains('select')) {
+  f1=1;
+ 
+}
+let btn4 = document.getElementById('btn4')
 
-//       let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
-//       let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
+btn4.onclick = ()=>{ 
+  let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
+  let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
+  let pokf3 = new Pokemonfight(name3.innerHTML, hp3.innerHTML, attack3.innerHTML)
+  if(f1 === 1){
+    if (p1 ===1 && p2 === 1){
+      if (fight(pokf1, pokf2) === name2.innerHTML) {
+        alert(name2.innerHTML)    
 
-//       if (fight(pokf1, pokf2) === name2.innerHTML) {
-//         img1.src = ''
+      }
+      else if (fight(pokf1, pokf2) === name1.innerHTML) {
+        img2.src = ''
+        alert(name1.innerHTML)
+      }
+      else{
+        alert('tie')
+      }
+    }
+    else if(p2 ===1 && p3 ===1){
+      if (fight(pokf2, pokf3) === name2.innerHTML) {
+        alert(name2.innerHTML)
+        
+              }
+     if (fight(pokf2, pokf3) === name3.innerHTML) {
+      alert(name3.innerHTML)
+        
+       }
+       else{
+        alert('tie')
+      }
+    }
+    else if (p1 === 1 && p3 === 1){
+     
 
-//       }
-//       if (fight(pokf1, pokf2) === name1.innerHTML) {
-//         img2.src = ''
+      if (fight(pokf1, pokf3) === name1.innerHTML) {
+        alert(name1.innerHTML)
+        
+              }
+     if (fight(pokf1, pokf3) === name3.innerHTML) {
+      alert(name3.innerHTML)
+        }
+     else{
+       alert('tie')
+     }
 
-//       }
+
+    }
+
+
+}}
+
+   
+
+     
+
 
 //     } else if (img2.classList.contains('select') && img3.classList.contains('select')) {
 
