@@ -182,11 +182,23 @@ btnc2.onclick = () => {
 };
 
 //pokemon fight
+let pokemonSelect1 = 0;
+let pokemonSelect2 = 0;
+let select = 0;
+let p1 = 0;
+let p2 = 0;
+let p3 = 0;
 let arrImg = [img1, img2, img3];
 let funcSelect = () => {
-  for (k of arrImg) {
-    arrImg.img1.classList.remove("select");
+  for (let k in arrImg) {
+    arrImg[k].classList.remove("select");
   }
+  pokemonSelect1 = 0;
+  pokemonSelect2 = 0;
+  select = 0;    
+  p1 = 0;
+  p2 = 0;
+  p3 = 0;
 };
 
 let b1 = document.getElementById("btn1");
@@ -248,7 +260,7 @@ document.getElementById("btn6").onclick = () => {
     imgStyle(20, 30, 0);
     openClose = 0;
     funcShowbtn();
-    funcSelect();
+    funcSelect();   
     
     
   }
@@ -256,13 +268,7 @@ document.getElementById("btn6").onclick = () => {
 
 //select 2 pokemons
 
-let pokemonSelect1 = 0;
-let pokemonSelect2 = 0;
-let select = 0;
-let remove = 0;
-let p1 = 0;
-let p2 = 0;
-let p3 = 0;
+
 
 b1.onclick = () => {
   if (select <= 1 && p1 === 0) {
