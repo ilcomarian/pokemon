@@ -99,7 +99,7 @@ body {
     #btn {
         width: 18%;
         height: 20%;
-        border: 3px solid red;
+        // border: 3px solid red;
         position: absolute;
         right: 10%;
         bottom: 29%;
@@ -161,13 +161,13 @@ body {
         }
         ;
         #fight {
-            border: 3px solid red;
-            width: 100%;
+            
+            opacity: 0;
         }
         ;
         #btn7-8 {
             width: 100%;
-            height: 40%;
+            height: 30%;
             border: 3px solid rgb(66, 50, 205);
             display: flex;
             align-items: center;
