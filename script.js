@@ -40,8 +40,7 @@ class Pokemon {
     this.ability = ability;
   }
    
-  render(num) {
-   
+  render(num) {   
     document.getElementById("name" + num).append(this.name);
     document.getElementById("hp" + num).append(this.hp);
     document.getElementById("attack" + num).append(this.attack);
@@ -54,8 +53,7 @@ class Trainer {
   constructor() {
       this.listOfPokemon = {};
   }
-  all() {
-      // console.log(this.listOfPokemon);
+  all() {    
       return Object.values(this.listOfPokemon);
   };
 
@@ -65,6 +63,9 @@ class Trainer {
   }
   add(pokemonObject) {
       this.listOfPokemon[pokemonObject.name] = pokemonObject
+  }
+  remove(name){
+    delete this.listOfPokemon[name]
   }
 };
 let mark = new Trainer()
@@ -77,7 +78,7 @@ let imgp = (n, pok) =>
   });
 
 let namePokemon = (name, img, num) =>
-  axios.get("https://pokeapi.co/api/v2/pokemon/" + name).then(r => {
+  axios.get("https://pokeapi.co/api/v2/pokemon/" + name).then(r => {  
     let data = r.data;
     let hp = data.stats["5"].base_stat;
     let attack = data.stats["4"].base_stat;
@@ -110,6 +111,7 @@ btnpok1.onclick = () => {
   if (pok1on === 0) {
     namePokemon("dratini", img1, 1);
     func(1);
+    
     pok1on++;
   } else {
     func(1);
@@ -368,7 +370,7 @@ btn5.onclick = () => {
  
 }
 let btn4 = document.getElementById('btn4')
-
+// let arr = [pokemon1, pokemon2, pokemon3, txtpok1, txtpok2, txtpok3];
 btn4.onclick = ()=>{ 
   let pokf1 = new Pokemonfight(name1.innerHTML, hp1.innerHTML, attack1.innerHTML)
   let pokf2 = new Pokemonfight(name2.innerHTML, hp2.innerHTML, attack2.innerHTML)
@@ -376,7 +378,7 @@ btn4.onclick = ()=>{
   if(f1 === 1){
     if (p1 ===1 && p2 === 1){
       if (fight(pokf1, pokf2) === name2.innerHTML) {
-        alert(name2.innerHTML)    
+        alert(name2.innerHTML)  
 
       }
       else if (fight(pokf1, pokf2) === name1.innerHTML) {
