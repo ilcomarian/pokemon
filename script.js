@@ -245,7 +245,7 @@ document.getElementById("btn6").onclick = () => {
   } else if (openClose === 1) {
     logo.src="img/logo.png"
     func();
-    imgStyle(20, 50, 0);
+    imgStyle(20, 30, 0);
     openClose = 0;
     funcShowbtn();
     funcSelect();
