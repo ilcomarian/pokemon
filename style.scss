@@ -46,8 +46,7 @@ body {
         ;
         #pokemon1 {
             @extend %pokemon-box;
-            z-index: -5;
-            // display: none;
+            z-index: -5; // display: none;
             #img1 {
                 @extend %pokemon-img;
             }
@@ -55,8 +54,7 @@ body {
         }
         ;
         #pokemon2 {
-            @extend %pokemon-box;
-            // display: none;
+            @extend %pokemon-box; // display: none;
             z-index: -5;
             #img2 {
                 @extend %pokemon-img;
@@ -65,8 +63,7 @@ body {
         }
         ;
         #pokemon3 {
-            @extend %pokemon-box;
-            // display: none;
+            @extend %pokemon-box; // display: none;
             z-index: -5;
             #img3 {
                 @extend %pokemon-img;
@@ -79,21 +76,18 @@ body {
     #txt {
         text-align: center;
         #txt-pok1 {
-            @extend %pokemon-txt;
-            // display: none;
+            @extend %pokemon-txt; // display: none;
             z-index: -5;
         }
         ;
         #txt-pok2 {
-            @extend %pokemon-txt;
-            // display: none;
+            @extend %pokemon-txt; // display: none;
             z-index: -5;
         }
         ;
         #txt-pok3 {
             @extend %pokemon-txt;
-            z-index: -5;
-            // display: none;
+            z-index: -5; // display: none;
         }
         ;
     }
@@ -131,20 +125,17 @@ body {
             #btn1 {
                 border: 3px solid white;
                 @extend %btn-wh;
-                margin-left: 60px;
-                display: none;
+                margin-left: 60px; // display: none;
             }
             ;
             #btn2 {
                 border: 3px solid blue;
-                @extend %btn-wh;
-                display: none;
+                @extend %btn-wh; // display: none;
             }
             ;
             #btn3 {
                 border: 3px solid white;
-                @extend %btn-wh;
-                display: none;
+                @extend %btn-wh; // display: none;
             }
             ;
             #btn4 {
@@ -278,6 +269,6 @@ body {
     }
 }
 
-.none{
+.none {
     display: none;
 }

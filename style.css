@@ -102,14 +102,11 @@ body {
         border: 3px solid white; }
       #container #btn #btn1-6 #btn1 {
         border: 3px solid white;
-        margin-left: 60px;
-        display: none; }
+        margin-left: 60px; }
       #container #btn #btn1-6 #btn2 {
-        border: 3px solid blue;
-        display: none; }
+        border: 3px solid blue; }
       #container #btn #btn1-6 #btn3 {
-        border: 3px solid white;
-        display: none; }
+        border: 3px solid white; }
       #container #btn #btn1-6 #btn4 {
         border: 3px solid yellow; }
       #container #btn #btn1-6 #btn5 {
