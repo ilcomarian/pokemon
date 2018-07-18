@@ -28,6 +28,8 @@ let attack3 = document.getElementById("attack3");
 let defense3 = document.getElementById("defense3");
 let ability3 = document.getElementById("ability3");
 
+
+
 class Pokemon {
   constructor(name, src, hp, attack, defense, ability) {
     this.name = name;
@@ -48,6 +50,25 @@ class Pokemon {
     img.src = this.img;
   }
 }
+class Trainer {
+  constructor() {
+      this.listOfPokemon = {};
+  }
+  all() {
+      // console.log(this.listOfPokemon);
+      return Object.values(this.listOfPokemon);
+  };
+
+  get(nameOfPoke) {
+      return (this.listOfPokemon[nameOfPoke])
+
+  }
+  add(pokemonObject) {
+      this.listOfPokemon[pokemonObject.name] = pokemonObject
+  }
+};
+let mark = new Trainer()
+
 
 let str = str => str[0].toUpperCase() + str.slice(1);
 let imgp = (n, pok) =>
@@ -62,17 +83,11 @@ let namePokemon = (name, img, num) =>
     let attack = data.stats["4"].base_stat;
     let defense = data.stats["3"].base_stat;
     let ability = data.abilities["0"].ability.name;
-    let pokk = new Pokemon(
-      str(name),
-      imgp(name, img),
-      hp,
-      attack,
-      defense,
-      ability
-    );
+    let pokk = new Pokemon(str(name),imgp(name, img),hp,attack,defense,ability);
     pokk.render(num);
- 
+    mark.add(pokk) 
   });
+
 let arr = [pokemon1, pokemon2, pokemon3, txtpok1, txtpok2, txtpok3];
 
 let func = num => {
