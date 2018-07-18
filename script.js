@@ -234,19 +234,23 @@ let funcShowbtn = () => {
     }
   }
 };
-
+let logo = document.getElementById('logo')
 document.getElementById("btn6").onclick = () => {
   if (openClose === 0) {
     func();
     imgStyle(10, 20, 13, "add");
     openClose = 1;
     funcShowbtn();
+    logo.src= "img/Fight!.png"
   } else if (openClose === 1) {
+    logo.src="img/logo.png"
     func();
     imgStyle(20, 50, 0);
     openClose = 0;
     funcShowbtn();
     funcSelect();
+    
+    
   }
 };
 
