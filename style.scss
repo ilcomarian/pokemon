@@ -99,7 +99,7 @@ body {
         height: 20%; // border: 3px solid red;
         position: absolute;
         right: 7%;
-        bottom: 31%;
+        bottom: 30%;
         #btn1-6 {
             width: 100%;
             height: 39%;
@@ -227,6 +227,10 @@ body {
     animation: bounce 1s infinite;
 }
 
+    .bounce {
+        -webkit-animation-name: bounce 1s infinit;
+    }
+
 @keyframes bounce {
     from,
     20%,
@@ -257,6 +261,9 @@ body {
     }
 }
 
+
 .none {
     display: none;
 }
+
+

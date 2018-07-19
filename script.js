@@ -384,7 +384,9 @@ btn4.onclick = () => {
   if (f1 === 1) {
     if (p1 === 1 && p2 === 1) {
       if (fight(pokf1, pokf2) === name2.innerHTML) {
+        
         alert(name2.innerHTML);
+          
         pokemon1.remove();
       } else if (fight(pokf1, pokf2) === name1.innerHTML) {
         img2.src = "";
@@ -395,11 +397,11 @@ btn4.onclick = () => {
       }
     } else if (p2 === 1 && p3 === 1) {
       if (fight(pokf2, pokf3) === name2.innerHTML) {
-        alert(name2.innerHTML);
+        alert(name2.innerHTML );
         pokemon3.remove();
       }
       if (fight(pokf2, pokf3) === name3.innerHTML) {
-        alert(name3.innerHTML);
+        alert(name3.innerHTML );
         pokemon2.remove();
       } else {
         alert("tie");
