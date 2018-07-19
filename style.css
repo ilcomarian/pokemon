@@ -96,7 +96,7 @@ body {
       align-items: center; }
       #container #btn #btn1-6 #btn-pok1 {
         border: 3px solid white;
-        margin-left: 70px; }
+        margin-left: 20%; }
       #container #btn #btn1-6 #btn-pok2 {
         border: 3px solid blue; }
       #container #btn #btn1-6 #btn-pok3 {
@@ -114,7 +114,7 @@ body {
         border: 3px solid white; }
       #container #btn #btn1-6 #btn6 {
         border: 3px solid blue;
-        margin-right: 65px; }
+        margin-right: 18%; }
     #container #btn #fight {
       opacity: 0; }
     #container #btn #btn7-8 {

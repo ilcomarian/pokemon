@@ -110,7 +110,7 @@ body {
             #btn-pok1 {
                 border: 3px solid white;
                 @extend %btn-wh;
-                margin-left: 70px; // display: none;  
+                margin-left: 20%; // display: none;  
             }
             ;
             #btn-pok2 {
@@ -151,7 +151,7 @@ body {
             ;
             #btn6 {
                 border: 3px solid blue;
-                margin-right: 65px;
+                margin-right: 18%;
                 @extend %btn-wh;
             }
             ;
