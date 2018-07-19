@@ -51,7 +51,7 @@ body {
   #container #frame {
     position: absolute;
     left: 10%;
-    bottom: 15%;
+    bottom: 14%;
     z-index: -2;
     width: 78%;
     height: 100%; }
