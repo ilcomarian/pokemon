@@ -96,13 +96,13 @@ body {
     ;
     #btn {
         width: 18%;
-        height: 23%; // border: 3px solid red;
+        height: 20%; // border: 3px solid red;
         position: absolute;
         right: 10%;
-        bottom: 29%;
+        bottom: 31%;
         #btn1-6 {
             width: 100%;
-            height: 40%;
+            height: 39%;
             border: 3px solid yellowgreen;
             display: flex;
             justify-content: space-between;
@@ -168,14 +168,14 @@ body {
             display: flex;
             align-items: center;
             flex-direction: row;
-            margin-top: -20px;
+            margin-top: 6%;
             #on {
                 width: 50px;
                 height: 50px;
                 border: 3px solid white;
                 display: flex;
                 align-self: center;
-                margin-left: 10px;
+                margin-left: 0px;
             }
             ;
             #btn-c {
@@ -185,6 +185,7 @@ body {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                margin-left: 10px;
                 #btn-c1 {
                     width: 50px;
                     height: 50px;
@@ -218,23 +219,9 @@ body {
     ;
 }
 
-/* Tablet Landscape */
+ 
 
-@media screen and (max-width: 1060px) {
-    body {
-        #container {
-            width: 100%;
-        }
-    }
-}
-
-/* Tabled Portrait */
-
-@media screen and (max-width: 768px) {
-    #container {
-        width: 100%;
-    }
-}
+ 
 
 .select {
     animation: bounce 1s infinite;
